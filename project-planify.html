@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planify — Paul Schlegel</title>
+<meta name="description" content="Planify — a floorplan app built with Magnus for visualizing spatial proportions, built with Python and Three.js.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="projects">
+
+<div data-include="header"></div>
+
+<main>
+  <section class="section" style="padding-bottom: var(--space-3);">
+    <div class="container">
+      <a class="breadcrumb" href="projects.html" data-de="← Alle Projekte" data-en="← All projects">← Alle Projekte</a>
+      <h1>Planify</h1>
+      <div class="tags"><span class="tag tag-design">Computational Design</span></div>
+      <div class="btn-row" style="margin-top: var(--space-3);">
+        <a class="btn btn-ghost" href="https://github.com/thegr8paul/planify-" target="_blank" rel="noopener" data-de="Code auf GitHub ↗" data-en="Code on GitHub ↗">Code auf GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container detail-layout">
+      <div>
+        <p class="max-w-prose" data-de="Eine Grundriss-App, die ich gemeinsam mit Magnus gebaut habe, damit sich jeder selbst ein besseres Bild von räumlichen Proportionen machen kann. Das komplette Backend haben wir ohne KI von Hand entwickelt — einzig das Frontend wurde KI-generiert." data-en="A floorplan app Magnus and I built so that anyone can better visualize spatial proportions themselves. The entire backend was hand-built without AI — only the frontend was AI-generated.">Eine Grundriss-App, die ich gemeinsam mit Magnus gebaut habe, damit sich jeder selbst ein besseres Bild von räumlichen Proportionen machen kann. Das komplette Backend haben wir ohne KI von Hand entwickelt — einzig das Frontend wurde KI-generiert.</p>
+        <p class="max-w-prose" data-de="Unser Einstiegsprojekt in Python — selbst gehostet, umgesetzt mit Three.js und Python." data-en="Our entry project into Python — self-hosted, built with Three.js and Python.">Unser Einstiegsprojekt in Python — selbst gehostet, umgesetzt mit Three.js und Python.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="label" data-de="Demo" data-en="Demo">Demo</span>
+      <h2 data-de="Planify in Aktion" data-en="Planify in action">Planify in Aktion</h2>
+      <p class="max-w-prose" data-de="Video-Präsentation von Planify, unserem Einstiegsprojekt in Python." data-en="Video presentation of Planify, our entry project into Python.">Video-Präsentation von Planify, unserem Einstiegsprojekt in Python.</p>
+      <div class="video-block">
+        <div class="video-frame">
+          <video src="assets/video/floorplan-generator-demo.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="video-bar">
+          <button type="button" class="video-btn video-toggle is-playing" aria-label="Video abspielen/pausieren">
+            <svg class="icon-play" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 8 L24 16 L11 24 Z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="8" x2="12" y2="24"/><line x1="20" y1="8" x2="20" y2="24"/></svg>
+          </button>
+          <input type="range" class="video-seek" min="0" max="100" value="0" step="0.1" aria-label="Videofortschritt">
+          <span class="video-time">0:00 / 0:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-include="footer"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
