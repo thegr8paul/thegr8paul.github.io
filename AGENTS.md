@@ -1,4 +1,4 @@
-# AGENTS.md — paulschlegel.github.io
+# AGENTS.md — thegr8paul.github.io
 
 Context file for AI coding agents (Codex, etc.) building Paul Schlegel's
 personal website + CV. Read this fully before writing any code.
@@ -6,9 +6,17 @@ personal website + CV. Read this fully before writing any code.
 ## Goal
 
 A personal website for Paul Schlegel, hosted for free on GitHub Pages at
-`https://paulschlegel.github.io/`. Repo name must be exactly
-`paulschlegel.github.io` (GitHub user-page convention — no extra config
-needed, it just goes live on push to `main`).
+`https://thegr8paul.github.io/`. Repo name must be exactly
+`thegr8paul.github.io` (matching Paul's actual GitHub username, `thegr8paul`
+— GitHub's free user-page auto-hosting convention, `<username>.github.io`,
+needs the repo name to match the account's username, not an arbitrary
+chosen name; no extra config needed beyond that, it just goes live on push
+to `main`). **Repo was originally created as `paulschlegel.github.io` and
+renamed to `thegr8paul.github.io` on 2026-09-22** after the site 404'd —
+see the deploy decision note near the bottom of this file for the full
+story. Any reference to `paulschlegel.github.io` elsewhere (old local
+folder name, old notes) is the pre-rename name; don't reintroduce it as
+the repo/deploy name.
 
 No build step. Plain HTML/CSS/JS only — must run by opening the files
 with a static server (e.g. `python3 -m http.server`) and by pushing
@@ -18,7 +26,7 @@ runtime.
 ## Site structure (multi-page, per Paul's decision)
 
 ```
-paulschlegel.github.io/
+thegr8paul.github.io/
 ├── index.html          # Home: hero + short intro + nav into the rest
 ├── career.html          # Full CV / timeline (see "CV content" below)
 ├── projects.html        # Project cards grouped by category, with tags
@@ -226,7 +234,7 @@ invent additional projects beyond the above without checking with Paul.
 
 Local preview:
 ```
-cd paulschlegel.github.io
+cd thegr8paul.github.io
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
@@ -234,16 +242,16 @@ python3 -m http.server 8000
 Deploy to GitHub Pages:
 ```
 git init
-git remote add origin https://github.com/thegr8paul/paulschlegel.github.io.git
+git remote add origin https://github.com/thegr8paul/thegr8paul.github.io.git
 git add .
 git commit -m "Initial site"
 git branch -M main
 git push -u origin main
 ```
-Because the repo is named `<username>.github.io`, GitHub Pages serves
-it automatically at `https://paulschlegel.github.io/` — no extra Pages
-config needed, just confirm in the repo's Settings → Pages that the
-source is "Deploy from branch: main / (root)".
+Because the repo is named `<username>.github.io` (username: `thegr8paul`),
+GitHub Pages serves it automatically at `https://thegr8paul.github.io/` —
+no extra Pages config needed, just confirm in the repo's Settings → Pages
+that the source is "Deploy from branch: main / (root)".
 
 ## Decisions made when building the site (2026-09-18)
 
@@ -1095,6 +1103,40 @@ source is "Deploy from branch: main / (root)".
   a different purpose (home-page teaser, not the full categorized
   listing) and this request was specifically about `projects.html`'s
   category structure.
+
+- **First deploy + repo renamed to `thegr8paul.github.io`** (2026-09-22):
+  walked Paul through `git init`/commit/push step by step in his own
+  terminal (deliberately not done by an agent, so the commits are
+  authored as Paul, not with a Claude co-author trailer — his own call,
+  see the exchange that led here). Along the way: caught a copy-paste
+  mistake where he'd literally set `git config --global user.email` to
+  the placeholder `"deine-github-email@example.com"` from an example
+  command — corrected to his real GitHub primary email
+  `paul-schlegel@online.de`. Also found and removed two stray/duplicate
+  raw image files that had been sitting in gallery folders outside this
+  session's own work (`assets/img/gallery/planify/planify-thumb_1.png`,
+  `assets/img/gallery/testware/testware-thumb original.png` — neither
+  referenced by any HTML, Paul deleted them himself in Finder before the
+  first commit). After the first push, the repo (created as
+  `paulschlegel.github.io`) 404'd on `https://paulschlegel.github.io/` —
+  turned out GitHub's free automatic Pages hosting at
+  `https://<name>.github.io/` only triggers when the repo name matches
+  the account's actual **username**, and Paul's GitHub username is
+  `thegr8paul`, not `paulschlegel` (confirmed via his GitHub profile —
+  display name "Paul Schlegel", login `thegr8paul`). With the mismatched
+  name it was being treated as an ordinary project repo, reachable only
+  at `https://thegr8paul.github.io/paulschlegel.github.io/`. Paul chose
+  to rename the repo (Settings → General → Repository name) to
+  `thegr8paul.github.io` rather than live with the longer nested URL —
+  confirmed working at `https://thegr8paul.github.io/` after the rename.
+  Local remote updated to match (`git remote set-url origin
+  https://github.com/thegr8paul/thegr8paul.github.io.git`). This file's
+  title/goal section and `README.md` were updated accordingly — every
+  `paulschlegel.github.io` reference as a repo/deploy name is now
+  `thegr8paul.github.io`; don't reintroduce the old name as the actual
+  deploy target if it comes up again (e.g. from stale memory of an
+  earlier conversation) — `paulschlegel.github.io` was only ever the
+  pre-rename working-directory/repo name, not a second live site.
 
 ## Open decisions Paul may still want to make
 
