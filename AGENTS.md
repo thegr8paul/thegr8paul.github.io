@@ -163,11 +163,22 @@ Abitur / Matura — Robert-Gerwig-Schule, Furtwangen, 2017–2020
 
 Kaderathlet Nordische Kombination — DOSB Skiinternat, Furtwangen, 2015–2020
 
-Skills: Stressresistent, kooperativ, Python, HTML, Three.js, IFC.js, CAD/CAM
+Skills: Python, Three.js, CAD/CAM
 Expertise: Rhino, Grasshopper (Karamba), IFC-Modellierung, 3D-Laserscan-Registrierung, Archicad
-Sprachen: Englisch (fließend), Deutsch (Muttersprache), Spanisch (gut), Thai (Grundkenntnisse)
-Interessen: serieller Holzbau, Klimawandel, Computational Design, Reinforcement Learning, KI in CAD-Software (MCP), Robotik im Bauwesen
-Hobbys: Architektur entdecken, Skifahren, Podcasts hören, 3D-Druck, PC-Selbstbau
+Data & KI: Pandas, TensorFlow, Keras, Deep Learning, Reinforcement Learning, Cloud Computing, Agentic AI & RAG (MCP)
+Sprachen: Englisch (fließend), Deutsch (Muttersprache)
+Interessen: Serieller Holzbau, Robotik im Bauwesen
+Hobbys: Architektur, Skifahren, Podcasts hören, 3D-Druck, PC-Bau
+(2026-09-27/28 revision: removed soft-skill filler (Stressresistent,
+kooperativ) and dated interests (Klimawandel), removed Spanisch/Thai
+from Sprachen, removed duplicate IFC.js from Skills (IFC-Modellierung
+already covers it under Expertise), removed HTML and Computational
+Design from their old slots, added a dedicated Data & KI row moving
+Deep Learning/Reinforcement Learning/Cloud Computing/RAG(MCP) there
+from Data & KI + Interessen to avoid duplication, shortened two Hobbys
+entries ("Architektur entdecken" → "Architektur", "PC-Selbstbau" →
+"PC-Bau"). Don't re-add any of the removed items without checking with
+Paul first.)
 
 ## Projects content (for projects.html)
 
@@ -184,13 +195,16 @@ grouping and tags as given:
    project** — built together with Mitesh, Thais, and Emanuel. Paul's
    specific contribution: the RAG pipeline and the domain knowledge
    (digital twin / construction-tech expertise) behind it.
-   Tags: `LLM` `RAG` `Product` `Team`
+   Tags: `LLM` `RAG` `Team` (`Product` removed 2026-09-28 — see decision
+   log; was redundant/too generic next to Team)
 2. **Wilhelmstraße 5 Bauvorhaben** — a project run together
    with the architecture office (Schwär Architektur) where Paul combined
    everything he does: laser scanning (done independently/self-run),
    permit/approval documentation, construction project management
    (Bauleitung), and Holzbauarbeiten (timber construction work).
-   Tags: `Laserscanning` `BIM` `Bauleitung` `Holzbauarbeiten`
+   Tags: `Laserscanning` `BIM` `Bauleitung` `Holzbau` `Team` (Team added
+   2026-09-27 — see decision log; supersedes the earlier "stays solo"
+   note further down this file)
 3. **Bamboo Study Hub** — Robert-Dyckerhoff-Stiftung, Mae-Sariang,
    Nordthailand. Initiated, planned and built a bamboo library/study
    hub; also led a school bathroom renovation (site supervision) and
@@ -218,14 +232,16 @@ built. Do not re-add it.)
 ### Studien- & Forschungsprojekte
 5. **SolFibreHouse** — Bachelor's thesis, parametric building
    extension/addition ("parametrische Aufstockung").
-   Tags: `Parametric Design` `Grasshopper`
+   Tags: `Parametric Design` `Grasshopper` `Computational Design` (added
+   2026-09-28 — Paul confirmed SolFibreHouse is Computational Design too)
 6. **Planify** (file: `project-planify.html`, was
    `project-floorplan-generator.html` until 2026-09-19 — corrected, see
    decision note below) — a floorplan app built with Magnus so anyone
    can better visualize spatial proportions themselves. Their entry
    project into Python. Backend fully hand-built without AI; only the
    frontend was AI-generated. Self-hosted. Tools: Three.js, Python.
-   Tags: `Computational Design`
+   **Team project** — built together with Magnus.
+   Tags: `Computational Design` `Team`
 
 Do NOT include "Living Timber Bridge" — explicitly removed. Do not
 invent additional projects beyond the above without checking with Paul.
@@ -1137,6 +1153,47 @@ that the source is "Deploy from branch: main / (root)".
   deploy target if it comes up again (e.g. from stale memory of an
   earlier conversation) — `paulschlegel.github.io` was only ever the
   pre-rename working-directory/repo name, not a second live site.
+
+- **Planify tagged `Team`** (2026-09-25): Paul pointed out Planify was
+  missing its `Team` tag — it was built together with Magnus (same as
+  the existing project description already said), but only
+  `Computational Design` had ever been applied. Added `Team` (category
+  `tag-collab`, same pastel group as testware's `Team`/`Product` tags)
+  in all three places tags live: the detail page
+  (`project-planify.html`), the card's `data-tags` on `projects.html`
+  (`data-tags="computational-design team"`), and the `tags.html` count
+  (`Team` bumped from `(1)` to `(2)`). Paul also confirmed, while
+  reviewing this, that testware.dev is correctly `Team`,
+  Schwarzwaldhaus and the Nextcloud project are correctly *not* `Team`
+  (solo work), and Wilhelmstraße 5 / Bestandsaufstockung
+  Einfamilienhaus (the two construction-site/BIM projects) stay solo
+  too — no changes needed on any of those, they were already right.
+
+  **⚠️ Superseded 2026-09-27**: Paul reconsidered and said everything
+  tied to the Architekturbüro is team work too — added `Team` to both
+  Wilhelmstraße 5 and Bestandsaufstockung Einfamilienhaus after all (in
+  the detail page, the `projects.html` card `data-tags`, and bumped the
+  `tags.html` count from `(2)` to `(4)`). Bestandsaufstockung's body
+  copy was also reworded — it used to say the planning was done
+  "eigenständig" (independently); now it opens with "Ein im Team des
+  Architekturbüros Schwär Architektur bearbeitetes Projekt" and
+  attributes the planning steps to Paul specifically, so it no longer
+  contradicts the Team tag. Schwarzwaldhaus and the Nextcloud project
+  were *not* revisited and still carry no `Team` tag — if Paul's
+  broader "everything Architekturbüro-related is team work" reasoning
+  should apply to those two as well, that's still open (ask before
+  changing).
+
+  **2026-09-28**: the `Team & Zusammenarbeit` tag-group on `tags.html`
+  was renamed to `Sonstiges`/`Other`, and the `Product` tag (previously
+  only on testware.dev, count `(1)`) was removed entirely — from
+  `tags.html`, `project-testware.html`'s tag chips, and testware's
+  `data-tags` on `projects.html`. Also: all tag chips on every project
+  detail page were plain non-interactive `<span>`s — they're now
+  `<a href="projects.html?tag=...">` links (styling already had an
+  `a.tag` rule in `style.css`, just unused until now), so a project's
+  tags actually link back into the filtered projects view instead of
+  being decorative.
 
 ## Open decisions Paul may still want to make
 
